@@ -52,3 +52,18 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# Rider IDE files
+    .idea/workspace.xml
+    .idea/modules.xml
+    .idea/libraries/
+    .idea/scopes/
+    .idea/codeStyles/
+    .idea/vcs.xml
+    .idea/encodings.xml
+    .idea/misc.xml
+    .idea/inspectionProfiles/
+    .idea/fileTemplates/
+    .idea/runConfigurations/
+    *.DotSettings
+    *.DotSettings.user
