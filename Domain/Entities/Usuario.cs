@@ -1,3 +1,5 @@
+using tarefas.application.dtos;
+
 namespace Tarefas.Domain.Entities;
 
 public class Usuario
@@ -9,4 +11,14 @@ public class Usuario
     public string Role { get; set; } = string.Empty;
     
     public List<Tarefa>? Tarefas { get; set; }
+
+    public Usuario(){}
+
+    public Usuario(UsuarioRequestDTO dto)
+    {
+        Nome = dto.Nome;
+        Email = dto.Email;
+        Senha = dto.Senha;
+        Role = dto.Role;
+    }
 }

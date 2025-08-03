@@ -1,5 +1,6 @@
 using System.Data;
 using Npgsql;
+using Tarefas.Application.Services;
 using Tarefas.Infrastructure.Data.Dapper;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +17,7 @@ builder.Services.AddScoped<IDbConnection>(_ =>
 
 builder.Services.AddScoped<ITarefaRepository, TarefaRepository>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 
 var app = builder.Build();
 
