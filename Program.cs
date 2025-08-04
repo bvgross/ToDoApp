@@ -1,11 +1,36 @@
+using System.Data;
+using System.Text.Json.Serialization;
+using Npgsql;
+using Tarefas.Application.Services;
+using Tarefas.Infrastructure.Data.Dapper;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        // Adiciona a configuração para converter strings em enums
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
 
 // Controllers
 builder.Services.AddControllers();
 
-// Swagger (Conferir se é necessário)
+// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Connections
+builder.Services.AddScoped<IDbConnection>(_ =>
+    new NpgsqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Repostórios
+builder.Services.AddScoped<ITarefaRepository, TarefaRepository>();
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+
+// Servioes
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<ITarefaService, TarefaService>();
 
 var app = builder.Build();
 
