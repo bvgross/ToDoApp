@@ -4,11 +4,11 @@ using Tarefas.Domain.Entities;
 
 namespace Tarefas.Infrastructure.Data.Dapper;
 
-public class TarefaRepository : ITarefaRepository
+public class TarefaRepositoryBkp : ITarefaRepository
 {
     private readonly IDbConnection _connection;
 
-    public TarefaRepository(IDbConnection connection)
+    public TarefaRepositoryBkp(IDbConnection connection)
     {
         _connection = connection;
     }
@@ -58,7 +58,7 @@ public class TarefaRepository : ITarefaRepository
     public async Task<int> CreateAsync(Tarefa tarefa)
     {
         var sql = @"INSERT INTO application.tarefa (Titulo, Corpo, DataInicial, DataFinal, UsuarioId, Status)
-                    VALUES (@Titulo, @Corpo, @DataInicial, @DataFinal, @UsuarioId, @Status)
+                    VALUES (@Titulo, @Corpo, @DataInicial, @DataFinal, @UsuarioId, @Status);
                     RETURNING Id";
 
         return await _connection.ExecuteScalarAsync<int>(sql, tarefa);

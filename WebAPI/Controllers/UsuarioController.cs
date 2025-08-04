@@ -57,7 +57,7 @@ public class UsuarioController : ControllerBase
     }
 
     [HttpDelete("{id}/deletar")]
-    public async Task<IActionResult> DeletarUsuario(int id)
+    public async Task<IActionResult> DeletarUsuario([FromRoute] int id)
     {
         var deletado = await _usuarioService.DeletarUsuarioAsync(id);
         

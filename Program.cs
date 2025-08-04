@@ -1,9 +1,17 @@
 using System.Data;
+using System.Text.Json.Serialization;
 using Npgsql;
 using Tarefas.Application.Services;
 using Tarefas.Infrastructure.Data.Dapper;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        // Adiciona a configuração para converter strings em enums
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
 
 // Controllers
 builder.Services.AddControllers();
@@ -22,6 +30,7 @@ builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
 // Servioes
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<ITarefaService, TarefaService>();
 
 var app = builder.Build();
 

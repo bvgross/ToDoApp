@@ -10,14 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0b6e422-c47f-4d36-8a41-9a3cf9c1458a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Application/DTOs/UsuarioRoleRequestDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/DTOs/TarefaRequestDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/DTOs/TarefaResponseDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/DTOs/TarefaStatusRequestDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Services/ITarefaService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Services/TarefaService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/Data/Dapper/TarefaRepositoryBkp.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tarefas.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tarefas.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/DTOs/UsuarioRequestDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/DTOs/UsuarioRequestDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/IUsuarioService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/IUsuarioService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Services/UsuarioService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/UsuarioService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Entities/Usuario.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entities/Usuario.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entities/Tarefa.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entities/Tarefa.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Enums/StatusTarefa.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Enums/StatusTarefa.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/Dapper/TarefaRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Data/Dapper/TarefaRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/TarefaController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/TarefaController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/UsuarioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/UsuarioController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sqlQuerys.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sqlQuerys.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +114,7 @@
       <workItem from="1754098026157" duration="1191000" />
       <workItem from="1754152195673" duration="22292000" />
       <workItem from="1754187264691" duration="594000" />
-      <workItem from="1754249620796" duration="13860000" />
+      <workItem from="1754249620796" duration="28255000" />
     </task>
     <servers />
   </component>
