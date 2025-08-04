@@ -17,7 +17,4 @@ public class UsuarioRequestDTO
     [Required(ErrorMessage = "A confirmação de senha é obrigatória.")]
     [Compare("Senha", ErrorMessage = "As senhas não coincidem.")]
     public required string ConfirmaSenha { get; init; }
-
-    [Required(ErrorMessage = "A role é obrigatória.")]
-    public required string Role { get; init; }
 }

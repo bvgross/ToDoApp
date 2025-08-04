@@ -8,7 +8,7 @@ public class Usuario
     public string Nome { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
     public string Senha { get; set; } = string.Empty;
-    public string Role { get; set; } = string.Empty;
+    public string Role { get; set; } = "user";
     
     public List<Tarefa>? Tarefas { get; set; }
 
@@ -19,6 +19,5 @@ public class Usuario
         Nome = dto.Nome;
         Email = dto.Email;
         Senha = dto.Senha;
-        Role = dto.Role;
     }
 }

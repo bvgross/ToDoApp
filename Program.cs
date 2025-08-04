@@ -8,15 +8,19 @@ var builder = WebApplication.CreateBuilder(args);
 // Controllers
 builder.Services.AddControllers();
 
-// Swagger (Conferir se é necessário)
+// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Connections
 builder.Services.AddScoped<IDbConnection>(_ =>
     new NpgsqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// Repostórios
 builder.Services.AddScoped<ITarefaRepository, TarefaRepository>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+
+// Servioes
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 
 var app = builder.Build();
